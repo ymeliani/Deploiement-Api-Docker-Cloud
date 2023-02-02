@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y python3
+RUN apt-get update && apt install python3 -y
+
+EXPOSE 5000
 
 CMD ["python3", "-m", "http.server"]
